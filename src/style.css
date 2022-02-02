@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Poppins";
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+.sect1 {
+  height: 100vh;
+  background: #7eceab;
+}
+.sect2 {
+  height: 100vh;
+  background: #f19ac4;
+}
+.sect3 {
+  height: 100vh;
+  background: #907dbd;
+}
+.sect4 {
+  height: 100vh;
+  background: #ffe38f;
+}
+.sect5 {
+  height: 100vh;
+  background: #fef8e2;
+}
+.sect5 {
+  height: 100vh;
+  background: #fef8e2;
+}
+.sect6 {
+  height: 100vh;
+  background: #ffffff;
+}
+.sect7 {
+  height: 10vh;
+  background: #000000;
+}
