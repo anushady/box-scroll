@@ -11,25 +11,27 @@ const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
 // var loader = new GLTFLoader();
-// var obj;
+// var obj1;
 // loader.load(
 //   // resource URL
 //   "box.glb",
 //   // called when the resourc ce is loaded
 //   function (gltf) {
-//     obj = gltf.scene;
-//     scene.add(obj);
-//     obj.scale.set(1, 1, 1);
-//     obj.rotation.set(0, 0, 0);
-//     obj.position.set(0, 0, 0);
+//     obj1 = gltf.scene;
+//     scene.add(obj1);
+//     obj1.scale.set(1, 1, 1);
+//     obj1.rotation.set(0, 0, 0);
+//     obj1.position.set(0, 0, 0);
 //   }
 // );
 // Lights
 
-const cube = new THREE.BoxGeometry(1, 1, 1);
+const obj = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshStandardMaterial(0xffffff);
-const obj = new THREE.Mesh(cube, material);
-scene.add(obj);
+const obj1 = new THREE.Mesh(obj, material);
+obj1.position.set(3, 0, 0);
+
+scene.add(obj1);
 
 const pointLight = new THREE.PointLight(0xffffff, 0.3);
 pointLight.position.x = 2;
@@ -95,6 +97,64 @@ scene.add(camera);
 // const controls = new OrbitControls(camera, canvas)
 // controls.enableDamping = true
 
+//play ground
+
+function lerp(x, y, a) {
+  return (1 - a) * x + a * y;
+}
+// Used to fit the lerps to start and end at specific scrolling percentages
+function scalePercent(start, end) {
+  return (scrollPercent - start) / (end - start);
+}
+var animationScripts = [];
+
+//add an animation that moves the obj1 through first 40 percent of scroll
+animationScripts.push({
+  start: 0,
+  end: 20,
+  func: function () {
+    camera.lookAt(obj1.position);
+    camera.position.set(0, 0, 4);
+    //camera.lookAt(obj1.position);
+    //obj1.position.set(2, 0, 0);
+    //obj1.position.x = lerp(0, 0, scalePercent(0, 20));
+    obj1.rotation.y = lerp(0, Math.PI, scalePercent(0, 20));
+    console.log(obj1.position.z);
+  },
+});
+
+//add an animation that rotates the obj1 between 40-60 percent of scroll
+animationScripts.push({
+  start: 20,
+  end: 100,
+  func: function () {
+    camera.lookAt(obj1.position);
+    camera.position.set(0, 0, 4);
+
+    obj1.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
+    //console.log(obj1.rotation.z)
+  },
+});
+
+function playScrollAnimations() {
+  animationScripts.forEach(function (a) {
+    if (scrollPercent >= a.start && scrollPercent < a.end) {
+      a.func();
+    }
+  });
+}
+
+var scrollPercent = 0;
+document.body.onscroll = function () {
+  //calculate the current scroll progress as a percentage
+  scrollPercent =
+    ((document.documentElement.scrollTop || document.body.scrollTop) /
+      ((document.documentElement.scrollHeight || document.body.scrollHeight) -
+        document.documentElement.clientHeight)) *
+    100;
+  document.getElementById("scrollProgress").innerText =
+    "Scroll Progress : " + scrollPercent.toFixed(2);
+};
 /**
  * Renderer
  */
@@ -105,12 +165,12 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-const updateOnScroll = (event) => {
-  obj.rotation.y = window.scrollY * 0.00251;
+// const updateOnScroll = (event) => {
+//   obj1.rotation.y = window.scrollY * 0.00755;
 
-  //obj2.position.z = window.scrollY *.001
-};
-window.addEventListener("scroll", updateOnScroll);
+//   //obj12.position.z = window.scrollY *.001
+// };
+// window.addEventListener("scroll", updateOnScroll);
 /**
  * Animate
  */
@@ -120,8 +180,9 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  // Update objects
-  //if (obj) obj.rotation.y = 0.5 * elapsedTime;
+  playScrollAnimations();
+  // Update obj1ects
+  //if (obj1) obj1.rotation.y = 0.5 * elapsedTime;
 
   // Update Orbital Controls
   // controls.update()
@@ -132,5 +193,6 @@ const tick = () => {
   // Call tick again on the next frame
   window.requestAnimationFrame(tick);
 };
+window.scrollTo({ top: 0, behavior: "smooth" });
 
 tick();
