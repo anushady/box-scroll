@@ -11,20 +11,20 @@ let effect;
 // Scene
 const scene = new THREE.Scene();
 //scene.background = new THREE.Color(0x444488);
-// var loader = new GLTFLoader();
-// var obj1;
-// loader.load(
-//   // resource URL
-//   "box.glb",
-//   // called when the resourc ce is loaded
-//   function (gltf) {
-//     obj1 = gltf.scene;
-//     scene.add(obj1);
-//     obj1.scale.set(1, 1, 1);
-//     obj1.rotation.set(0, 0, 0);
-//     obj1.position.set(0, 0, 0);
-//   }
-// );
+var loader = new GLTFLoader();
+var obj1;
+loader.load(
+  // resource URL
+  "h.glb",
+  // called when the resourc ce is loaded
+  function (gltf) {
+    obj1 = gltf.scene;
+    scene.add(obj1);
+    obj1.scale.set(450, 450, 450);
+    obj1.rotation.set(0, 0, 0);
+    obj1.position.set(0, 0, -300);
+  }
+);
 // Lights
 
 // const obj = new THREE.BoxGeometry(1, 1, 1);
@@ -111,7 +111,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 0;
 camera.position.y = 0;
-camera.position.z = 1300;
+camera.position.z = 1350;
 //camera.lookAt(0);
 scene.add(camera);
 
@@ -119,63 +119,6 @@ scene.add(camera);
 //const controls = new OrbitControls(camera, canvas);
 //controls.enableDamping = true;
 
-//play ground
-
-function lerp(x, y, a) {
-  return (1 - a) * x + a * y;
-}
-// Used to fit the lerps to start and end at specific scrolling percentages
-function scalePercent(start, end) {
-  return (scrollPercent - start) / (end - start);
-}
-var animationScripts = [];
-
-//add an animation that moves the obj1 through first 40 percent of scroll
-animationScripts.push({
-  start: 0,
-  end: 20,
-  func: function () {
-    //camera.lookAt(obj1.position);
-    mesh.position.x = lerp(900, 0, scalePercent(0, 20));
-    //material.color = 0xff0000;
-    //camera.position.set(0, 1, 2);
-    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
-    //console.log(cube.position.z)
-  },
-});
-
-//add an animation that rotates the obj1 between 40-60 percent of scroll
-animationScripts.push({
-  start: 20,
-  end: 100,
-  func: function () {
-    material.color.set(0xffffff);
-    //camera.lookAt(obj1.position);
-    //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
-    //console.log(obj1.rotation.z)
-  },
-});
-
-function playScrollAnimations() {
-  animationScripts.forEach(function (a) {
-    if (scrollPercent >= a.start && scrollPercent < a.end) {
-      a.func();
-    }
-  });
-}
-
-var scrollPercent = 0;
-document.body.onscroll = function () {
-  //calculate the current scroll progress as a percentage
-  scrollPercent =
-    ((document.documentElement.scrollTop || document.body.scrollTop) /
-      ((document.documentElement.scrollHeight || document.body.scrollHeight) -
-        document.documentElement.clientHeight)) *
-    100;
-  document.getElementById("scrollProgress").innerText =
-    "Scroll Progress : " + scrollPercent.toFixed(2);
-};
 /**
  * Renderer
  */
@@ -199,7 +142,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
  *
  */
 
-const triangles = 300000;
+const triangles = 30000;
 
 const geometry = new THREE.BufferGeometry();
 
@@ -211,7 +154,7 @@ const color = new THREE.Color();
 
 const n = 800,
   n2 = n / 2; // triangles spread in the cube
-const d = 12,
+const d = 120,
   d2 = d / 2; // individual triangle size
 
 const pA = new THREE.Vector3();
@@ -300,6 +243,7 @@ const material = new THREE.MeshPhongMaterial({
 
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
+mesh.position.set(0, 0, -300);
 
 // const cubeWidth = 400;
 // const numberOfSphersPerSide = 5;
@@ -372,6 +316,135 @@ scene.add(mesh);
 //     }
 //   }
 // }
+
+//play ground
+
+function lerp(x, y, a) {
+  return (1 - a) * x + a * y;
+}
+// Used to fit the lerps to start and end at specific scrolling percentages
+function scalePercent(start, end) {
+  return (scrollPercent - start) / (end - start);
+}
+var animationScripts = [];
+
+//add an animation that moves the obj1 through first 40 percent of scroll
+animationScripts.push({
+  start: 0,
+  end: 5,
+  func: function () {
+    //camera.lookAt(obj1.position);
+    mesh.position.x = lerp(900, 0, scalePercent(0, 5));
+    if (obj1) obj1.position.x = lerp(900, 0, scalePercent(0, 5));
+    material.color.set(0xdddddd);
+    //camera.position.set(0, 1, 2);
+    //mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+animationScripts.push({
+  start: 5,
+  end: 24,
+  func: function () {
+    //camera.lookAt(obj1.position);
+    //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
+    material.color.set(0x12e190);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(5, 24));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(5, 24));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+animationScripts.push({
+  start: 24,
+  end: 42,
+  func: function () {
+    //camera.lookAt(obj1.position);
+    //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
+    material.color.set(0x2ec0ec);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 42));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 42));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+animationScripts.push({
+  start: 42,
+  end: 56,
+  func: function () {
+    //camera.lookAt(obj1.position);
+    //mesh.position.x = lerp(900, 0, scalePercent(42, 20));
+    material.color.set(0xe352e7);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 56));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 56));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+animationScripts.push({
+  start: 56,
+  end: 72,
+  func: function () {
+    //camera.lookAt(obj1.position);
+    //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
+    material.color.set(0xf18b06);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 72));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 72));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+
+//add an animation that rotates the obj1 between 40-60 percent of scroll
+animationScripts.push({
+  start: 72,
+  end: 90,
+  func: function () {
+    material.color.set(0xf1e206);
+    //camera.lookAt(obj1.position);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 90));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 90));
+    //console.log(obj1.rotation.z)
+  },
+});
+animationScripts.push({
+  start: 90,
+  end: 100,
+  func: function () {
+    material.color.set(0xeeeeee);
+    //camera.lookAt(obj1.position);
+    //camera.position.set(0, 1, 2);
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100));
+    //console.log(obj1.rotation.z)
+  },
+});
+
+function playScrollAnimations() {
+  animationScripts.forEach(function (a) {
+    if (scrollPercent >= a.start && scrollPercent < a.end) {
+      a.func();
+    }
+  });
+}
+
+var scrollPercent = 0;
+document.body.onscroll = function () {
+  //calculate the current scroll progress as a percentage
+  scrollPercent =
+    ((document.documentElement.scrollTop || document.body.scrollTop) /
+      ((document.documentElement.scrollHeight || document.body.scrollHeight) -
+        document.documentElement.clientHeight)) *
+    100;
+  document.getElementById("scrollProgress").innerText =
+    "Scroll Progress : " + scrollPercent.toFixed(2);
+};
 
 effect = new OutlineEffect(renderer);
 
