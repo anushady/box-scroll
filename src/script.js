@@ -1,10 +1,12 @@
 import "./style.css";
 import * as THREE from "three";
+import Scrollbar from "smooth-scrollbar";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { AmbientLight, Mesh, WireframeGeometry } from "three";
 import { OutlineEffect } from "three/examples/jsm/effects/OutlineEffect.js";
 
+//Scrollbar.init(document.querySelector("#my-scrollbar"));
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
 let effect;
@@ -104,14 +106,14 @@ window.addEventListener("resize", () => {
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(
-  75,
+  45,
   sizes.width / sizes.height,
   0.1,
   10000
 );
 camera.position.x = 0;
 camera.position.y = 0;
-camera.position.z = 1350;
+camera.position.z = 2200;
 //camera.lookAt(0);
 scene.add(camera);
 
@@ -142,7 +144,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
  *
  */
 
-const triangles = 30000;
+const triangles = 3000;
 
 const geometry = new THREE.BufferGeometry();
 
