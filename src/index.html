@@ -1,541 +1,177 @@
-/* @import url("static/nasalization-rg.otf"); */
-@font-face {
-  font-family: GTFlexa-Black;
-  src: url("/images/GTFlexa-ExtendedBold.3ed81d0da892d30a8cd6106bd2f9d55a.ttf")
-    format("truetype");
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100vh;
-  font-family: "GTFlexa-Black", sans-serif;
-  scroll-behavior: smooth;
-}
-
-.webgl {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-/* Nav bar */
-.container {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-.button {
-  position: absolute;
-  top: 4vh;
-  right: 5vw;
-  text-decoration: none;
-  color: black;
-  right: 100px;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
-.menu {
-  position: absolute;
-  overflow: auto;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-
-  transform: translateX(-100%);
-  z-index: 2;
-}
-.menu .button {
-  color: white;
-}
-
-.icon {
-  width: 37px;
-  height: 25px;
-}
-
-.ul {
-  position: absolute;
-  left: 20%;
-  display: flex;
-  width: 300px;
-  justify-content: center;
-  align-items: left;
-  height: 100vh;
-  flex-direction: column;
-}
-.ul li {
-  margin: 20px 0;
-  z-index: 2;
-}
-.ul li a {
-  text-decoration: none;
-
-  color: white;
-  transition: 2s;
-  font-family: "GTFlexa-Black", sans-serif;
-  font-size: 50px;
-  text-transform: uppercase;
-  font-weight: 500;
-  mix-blend-mode: difference;
-}
-.social {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  height: 80px;
-  width: 100%;
-}
-.social ul {
-  margin-left: 50px;
-  display: flex;
-}
-.social ul li {
-  margin: 0px 15px;
-}
-.social ul li a {
-  text-decoration: none;
-  color: white;
-  font-family: "GTFlexa-Black", sans-serif;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: lighter;
-}
-.bg {
-  position: absolute;
-  width: 250px;
-  filter: grayscale(1);
-  height: 300px;
-  mix-blend-mode: difference;
-}
-.bg1 {
-  top: 45px;
-  left: 120px;
-  background: url(/images/home.png) no-repeat 50% 50%;
-  background-size: cover;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: 1s ease-in-out;
-}
-.bg2 {
-  top: 100px;
-  left: 150px;
-  background: url(/images/aboutus.jpg) no-repeat 50% 50%;
-  background-size: cover;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: 1s ease-in-out;
-}
-.bg3 {
-  top: 250px;
-  left: 200px;
-  background: url(/images/Services.png) no-repeat 50% 50%;
-  background-size: cover;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: 1s ease-in-out;
-}
-.bg4 {
-  top: 400px;
-  left: 200px;
-  background: url(/images/home.png) no-repeat 50% 50%;
-  background-size: cover;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: 1s ease-in-out;
-}
-.li1:hover ~ .bg1,
-.li2:hover ~ .bg2,
-.li3:hover ~ .bg3,
-.li4:hover ~ .bg4 {
-  opacity: 1;
-  transform: translateY(0%);
-  transition: 1s ease-in-out;
-}
-.ul li a:hover {
-  transition: 2s;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
-  font-style: italic;
-}
-
-#scrollProgress {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 99;
-  font-size: 3vh;
-}
-.logo {
-  top: 0;
-  left: 0;
-}
-.logo img {
-  position: absolute;
-  width: 70px;
-  left: 6vw;
-  top: 3vh;
-}
-#line {
-  position: absolute;
-  height: 1px;
-  opacity: 0;
-  display: flex;
-  top: 9%;
-  left: 5.5vw;
-  background: rgb(236, 236, 236);
-  width: 88vw;
-}
-.sect {
-  height: 90vh;
-}
-.sect h1 {
-  position: absolute;
-  font-family: "GTFlexa-Black", sans-serif;
-  font-size: 130px;
-  display: flex;
-  top: 30%;
-  left: 5vw;
-  z-index: 0;
-}
-#creative {
-  position: absolute;
-  font-family: "GTFlexa-Black", sans-serif;
-  font-size: 130px;
-  display: flex;
-  top: 48%;
-  left: 5vw;
-  z-index: 0;
-}
-.colors {
-  position: absolute;
-  height: 10px;
-  display: flex;
-  top: 70%;
-  left: 5vw;
-  z-index: -1;
-}
-.green {
-  background: rgb(18, 225, 144);
-  width: 153px;
-}
-
-.blue {
-  background: rgb(46, 192, 236);
-  width: 306px;
-}
-.purple {
-  background: rgb(227, 82, 231);
-  width: 459px;
-}
-.orange {
-  background: rgb(255, 157, 11);
-  width: 612px;
-}
-.yellow {
-  background: rgb(241, 226, 6);
-  width: 765px;
-}
-
-.secta {
-  height: 40vh;
-  background: rgb(18, 225, 144);
-  background: linear-gradient(
-    0deg,
-    rgba(18, 225, 144, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-.sect1 {
-  height: 90vh;
-  background: rgb(18, 225, 144);
-}
-.sect1-left {
-  position: absolute;
-  align-items: left;
-  display: grid;
-  color: white;
-  left: 3vw;
-}
-.sect1-left h1 {
-  font-size: 150px;
-}
-.sect1-left h2 {
-  font-size: 40px;
-  color: rgb(18, 225, 144);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  margin-top: -24px;
-  margin-left: 5px;
-}
-.sect1-left div {
-  font-size: 22px;
-  margin-left: 5px;
-}
-.line1 {
-  position: absolute;
-  display: flex;
-  left: 3vw;
-  top: 150%;
-  width: 400px;
-  height: 50px;
-  color: white;
-}
-.sect1-right {
-  position: absolute;
-  align-items: right;
-  display: grid;
-  right: 0;
-  color: white;
-  margin-top: 500px;
-  font-size: 22px;
-}
-.sect1-right {
-  padding-right: 30px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-.sect1a {
-  height: 40vh;
-  background: rgb(46, 192, 236);
-  background: linear-gradient(
-    0deg,
-    rgba(46, 192, 236, 1) 0%,
-    rgba(18, 225, 144, 1) 100%
-  );
-}
-.sect2 {
-  height: 90vh;
-  background: rgb(46, 192, 236);
-}
-.sect2-left {
-  position: absolute;
-  align-items: right;
-  display: grid;
-  color: white;
-  right: 5vw;
-}
-.sect2-left h1 {
-  font-size: 150px;
-}
-.sect2-left h2 {
-  font-size: 40px;
-  color: rgb(46, 192, 236);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  margin-top: -24px;
-  margin-left: 5px;
-}
-.sect2-left div {
-  font-size: 22px;
-  margin-left: 5px;
-}
-
-.sect2-right {
-  position: absolute;
-  align-items: left;
-  display: grid;
-  left: 0;
-  margin-left: 60px;
-  color: white;
-  margin-top: 400px;
-  font-size: 22px;
-}
-.sect2-right {
-  padding-right: 30px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-.sect2a {
-  height: 40vh;
-  background: rgb(227, 82, 231);
-  background: linear-gradient(
-    0deg,
-    rgba(227, 82, 231, 1) 0%,
-    rgba(46, 192, 236, 1) 100%
-  );
-}
-.sect3 {
-  height: 90vh;
-  background: rgb(227, 82, 231);
-}
-.sect3-left {
-  position: absolute;
-  align-items: left;
-  display: grid;
-  color: white;
-  left: 3vw;
-}
-.sect3-left h1 {
-  font-size: 150px;
-  margin-top: 100px;
-}
-.sect3-left h2 {
-  font-size: 40px;
-  color: rgb(227, 82, 231);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  margin-top: -24px;
-  margin-left: 5px;
-}
-.sect3-left div {
-  font-size: 22px;
-  margin-left: 5px;
-}
-
-.sect3-right {
-  position: absolute;
-  align-items: right;
-  display: grid;
-  right: 0;
-  color: white;
-  margin-top: 250px;
-  font-size: 22px;
-}
-.sect3-right {
-  padding-right: 30px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-.sect3a {
-  height: 40vh;
-  background: rgb(255, 157, 11);
-  background: linear-gradient(
-    0deg,
-    rgb(255, 157, 11) 0%,
-    rgba(227, 82, 231, 1) 100%
-  );
-}
-.sect4 {
-  height: 90vh;
-  background: rgb(255, 157, 11);
-}
-.sect4-left {
-  position: absolute;
-  align-items: right;
-  display: grid;
-  color: white;
-  right: 5vw;
-}
-.sect4-left h1 {
-  font-size: 150px;
-}
-.sect4-left h2 {
-  font-size: 40px;
-  color: rgb(255, 157, 11);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  margin-top: -24px;
-  margin-left: 5px;
-}
-.sect4-left div {
-  font-size: 22px;
-  margin-left: 10px;
-}
-
-.sect4-right {
-  position: absolute;
-  align-items: left;
-  display: grid;
-  left: 0;
-  margin-left: 60px;
-  color: white;
-  margin-top: 400px;
-  font-size: 22px;
-}
-.sect4-right {
-  padding-right: 30px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-.sect4a {
-  height: 40vh;
-  background: rgb(241, 226, 6);
-  background: linear-gradient(
-    0deg,
-    rgba(241, 226, 6, 1) 0%,
-    rgb(255, 157, 11) 100%
-  );
-}
-.sect5 {
-  height: 90vh;
-  background: rgb(241, 226, 6);
-}
-.sect5-left {
-  position: absolute;
-  align-items: left;
-  display: grid;
-  color: white;
-  left: 3vw;
-}
-.sect5-left h1 {
-  font-size: 150px;
-}
-.sect5-left h2 {
-  font-size: 40px;
-  color: rgb(241, 226, 6);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  margin-top: -24px;
-  margin-left: 5px;
-}
-.sect5-left div {
-  font-size: 22px;
-  margin-left: 5px;
-}
-
-.sect5-right {
-  position: absolute;
-  align-items: right;
-  display: grid;
-  right: 0;
-  color: white;
-  margin-top: 400px;
-  font-size: 22px;
-}
-.sect5-right {
-  padding-right: 30px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-.sect5a {
-  height: 40vh;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(241, 226, 6, 1) 100%
-  );
-}
-.sect6 {
-  height: 90vh;
-  background: rgb(255, 255, 255);
-}
-.sect6 div {
-  position: absolute;
-  align-items: center;
-  display: grid;
-  margin-top: 220px;
-  margin-left: 50px;
-  color: white;
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-.sect6 h1 {
-  font-size: 200px;
-}
-
-.sect7 {
-  height: 10vh;
-  background: #000000;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeJS Starter</title>
+</head>
+<body>
+    
+    <canvas class="webgl"></canvas>
+        <!-- Nav Bar-->
+        <div class="logo">
+            <img src="/static/log.PNG" alt="xxxx">
+        </div>
+        <div id="line"></div>
+        </div>
+        <div class="container">
+            <div class="button"><img class="icon" src="/static/menu100.PNG" alt="menu"></div>
+    
+        </div>
+        <div class="menu">
+            
+            <div class="button"><img class="icon" src="/static/x100.PNG" alt="close"></div>
+    
+            <ul class="ul">
+                <li class="li1 li"><a href="#">Home</a></li>
+                <li class="li2 li"><a href="#">About</a></li>
+                <li class="li3 li"><a href="#">Services</a></li>
+                <li class="li4 li"><a href="#">Contact</a></li>
+                <div class="bg1 bg"></div>
+                <div class="bg2 bg"></div>
+                <div class="bg3 bg"></div>
+                <div class="bg4 bg"></div>
+            </ul>
+            <div class="social">
+                <ul>
+                <li class="social-li"><a href="#">facebook</a></li>
+                <li class="social-li"><a href="#">instagram</a></li>
+                <li class="social-li"><a href="#">twitter</a></li>
+            </ul>
+            </div>
+        </div>
+        
+        <!-- <span id="scrollProgress"></span> -->
+        
+        <section class="sect">
+            <h1>AGENCE</h1>
+            <h1 id="creative">CREATIVE</h1>
+            <div class="colors yellow"></div>
+            <div class="colors orange"></div>
+            <div class="colors purple"></div>
+            <div class="colors blue"></div>
+            <div class="colors green"></div>
+        </section>
+            
+                
+            
+        <section class="secta"></section>
+        <section class="sect1" id="strategique">
+            <div class="sect1-left">
+                <h1>BOX</h1>
+                <h2>STRATEGiQUE</h2><br><br>
+                <div>IDENTITE VISUELLE/BRANDIND</div><br>
+                <div class="line1"></div>
+                <div>CHARTE GRAPHIQUE</div> <br>
+                <div class="line1"></div>
+                <div>CREATION DE CONTENU</div><br>
+                <div class="line1"></div>
+            </div>
+            <div class="sect1-right">
+                <div>MARKETING SUR RESEAUXSOCIAUX</div><br>
+                <div class="line1"></div>
+                <div>CAMPAGNE PHYSIQUE/DIGITALE</div><br>
+                <div class="line1"></div>
+                <div>COMMUNITY MANAGEMENT</div>
+                <div class="line1"></div>
+            </div>
+        </section>
+        <section class="sect1a"></section>
+        <section class="sect2" id="digital">
+            <div class="sect2-left">
+                <h1>BOX</h1>
+                <h2>DIGITAL</h2><br><br>
+                <div>SEO</div><br>
+                <div class="line1"></div>
+                <div>DECISION ANALYTICS</div> <br>
+                <div class="line1"></div>
+                <div>APPLICATIONS</div><br>
+                <div class="line1"></div>
+            </div>
+            <div class="sect2-right">
+                <div>CREATION DE SITEWEB</div><br>
+                <div class="line1"></div>
+                <div>UX DESIGN</div><br>
+                <div class="line1"></div>
+                <div>UI DESIGN</div>
+                <div class="line1"></div>
+            </div>
+        </section>
+        <section class="sect2a"></section>
+        <section class="sect3" id="production">
+            <div class="sect3-left">
+                <h1>BOX</h1>
+                <h2>PRODUCTION</h2><br><br><br><br><br><br><br><br><br>
+                <div>DIRECTION ARTISTIQUE</div><br>
+                <div class="line1"></div>
+                <div>INSERTION 3D</div> <br>
+                <div class="line1"></div>
+                <div>SET & SOUND DESIGN</div><br>
+                <div class="line1"></div>
+            </div>
+            <div class="sect3-right">
+                <div>VIDEO INSTITUTIONELLE</div><br>
+                <div class="line1"></div>
+                <div>PHOTOSHOOT</div><br>
+                <div class="line1"></div>
+                <div>FILMS PUBLICITAIRES</div>
+                <div class="line1"></div>
+            </div>
+        </section>
+        <section class="sect3a"></section>
+        <section class="sect4" id="strategie">
+            <div class="sect4-left">
+                <h1>BOX</h1>
+                <h2>STRATEGIE</h2><br><br>
+                <div>STRATEGIE DE MARQUE</div><br>
+                <div class="line1"></div>
+                <div>STRATEGIE DIGITAL</div> <br>
+                <div class="line1"></div>
+                <div>MANIFEST</div><br>
+                <div class="line1"></div>
+            </div>
+            <div class="sect4-right">
+                <div>VEILLE DE COMPETION</div><br>
+                <div class="line1"></div>
+                <div>POSITIOONNEMENT</div><br>
+                <div class="line1"></div>
+                <div>RELATIONS PUBLIQUES</div>
+                <div class="line1"></div>
+            </div>
+        </section>
+        <section class="sect4a"></section>
+        <section class="sect5" id="talents">
+            <div class="sect5-left">
+                <h1>BOX</h1>
+                <h2>STRATEGiQUE</h2><br><br>
+                <div>IDENTITE VISUELLE/BRANDIND</div><br>
+                <div class="line1"></div>
+                <div>CHARTE GRAPHIQUE</div> <br>
+                <div class="line1"></div>
+                <div>CREATION DE CONTENU</div><br>
+                <div class="line1"></div>
+            </div>
+            <div class="sect5-right">
+                <div>MARKETING SUR RESEAUXSOCIAUX</div><br>
+                <div class="line1"></div>
+                <div>CAMPAGNE PHYSIQUE/DIGITALE</div><br>
+                <div class="line1"></div>
+                <div>COMMUNITY MANAGEMENT</div>
+                <div class="line1"></div>
+            </div>
+        </section>
+        <section class="sect5a"></section>
+        <section class="sect6"> 
+           <div>
+                <h1>REFERENCE</h1>
+            </div> 
+        </section>
+           
+        <section class="sect7">
+            <p>All rights reserved. BOX © 2022</p>
+        </section>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</body>
+</html>
