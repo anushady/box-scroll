@@ -1,15 +1,71 @@
 import "./style.css";
 import * as THREE from "three";
+import { gsap } from "gsap";
 import Scrollbar from "smooth-scrollbar";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { AmbientLight, Mesh, WireframeGeometry } from "three";
 import { OutlineEffect } from "three/examples/jsm/effects/OutlineEffect.js";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+import { OutlinePass } from "three/examples/jsm/postprocessing/OutlinePass.js";
+import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
+// GSAP MENU
 
-//Scrollbar.init(document.querySelector("#my-scrollbar"));
+var tl = gsap.timeline({
+  paused: "true",
+});
+tl.to(".menu", {
+  duration: 1,
+  x: "0%",
+  //ease: EXPO.easeInOut,
+});
+tl.fromTo(
+  ".li",
+  {
+    y: "-100%",
+    opacity: 0,
+  },
+  {
+    duration: 0.3,
+    opacity: 1,
+    y: "0%",
+    stagger: 0.15,
+  }
+);
+tl.fromTo(
+  ".social-li",
+  {
+    y: "-50%",
+    opacity: 0,
+  },
+  {
+    duration: 0.3,
+    opacity: 1,
+    stagger: 0.15,
+    //ease: EXPO.easeOut,
+  },
+  "-=0.5"
+);
+
+var sc = document.querySelector(".button");
+var xc = document.querySelector(".menu");
+
+sc.addEventListener("click", toggle);
+
+xc.addEventListener("click", togglec);
+
+function toggle() {
+  tl.play();
+}
+function togglec() {
+  tl.reverse();
+}
+
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
-let effect;
+
 // Scene
 const scene = new THREE.Scene();
 //scene.background = new THREE.Color(0x444488);
@@ -22,6 +78,7 @@ loader.load(
   function (gltf) {
     obj1 = gltf.scene;
     scene.add(obj1);
+
     obj1.scale.set(450, 450, 450);
     obj1.rotation.set(0, 0, 0);
     obj1.position.set(0, 0, -300);
@@ -69,7 +126,7 @@ loader.load(
 // const ambLight = new THREE.AmbientLight(0xffffff, 0.5);
 // scene.add(ambLight);
 
-scene.add(new THREE.AmbientLight(0x444444));
+scene.add(new THREE.AmbientLight(0x000000));
 
 const light1 = new THREE.DirectionalLight(0xffffff, 0.5);
 light1.position.set(1, 1, 1);
@@ -98,7 +155,12 @@ window.addEventListener("resize", () => {
 
   // Update renderer
   renderer.setSize(sizes.width, sizes.height);
+  composer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  effectFXAA.uniforms["resolution"].value.set(
+    1 / sizes.width,
+    1 / sizes.height
+  );
 });
 
 /**
@@ -106,14 +168,14 @@ window.addEventListener("resize", () => {
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(
-  45,
+  40,
   sizes.width / sizes.height,
   0.1,
   10000
 );
 camera.position.x = 0;
 camera.position.y = 0;
-camera.position.z = 2200;
+camera.position.z = 2300;
 //camera.lookAt(0);
 scene.add(camera);
 
@@ -132,7 +194,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.outputEncoding = THREE.sRGBEncoding;
-
+renderer.shadowMap.enabled = true;
 /**
  * Animate
  *
@@ -144,7 +206,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
  *
  */
 
-const triangles = 3000;
+const triangles = 2000;
 
 const geometry = new THREE.BufferGeometry();
 
@@ -336,9 +398,13 @@ animationScripts.push({
   end: 5,
   func: function () {
     //camera.lookAt(obj1.position);
-    mesh.position.x = lerp(900, 0, scalePercent(0, 5));
-    if (obj1) obj1.position.x = lerp(900, 0, scalePercent(0, 5));
+    mesh.position.x = lerp(1000, 0, scalePercent(0, 5));
+    if (obj1) obj1.position.x = lerp(1000, 0, scalePercent(0, 5));
+
     material.color.set(0xdddddd);
+
+    mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
+    if (obj1) obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
     //camera.position.set(0, 1, 2);
     //mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
@@ -417,13 +483,13 @@ animationScripts.push({
 });
 animationScripts.push({
   start: 90,
-  end: 100,
+  end: 100.1,
   func: function () {
     material.color.set(0xeeeeee);
     //camera.lookAt(obj1.position);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
     //console.log(obj1.rotation.z)
   },
 });
@@ -448,7 +514,28 @@ document.body.onscroll = function () {
     "Scroll Progress : " + scrollPercent.toFixed(2);
 };
 
-effect = new OutlineEffect(renderer);
+var composer = new EffectComposer(renderer);
+
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+var effect = new OutlineEffect(renderer);
+var outlinePass = new OutlinePass(
+  new THREE.Vector2(sizes.width, sizes.height),
+  scene,
+  camera
+);
+composer.addPass(outlinePass);
+effect.edgeStrength = Number(10000);
+outlinePass.edgeGlow = Number(1000);
+// outlinePass.edgeThickness = Number(1000);
+// outlinePass.pulsePeriod = Number(0);
+//effect.visibleEdgeColor.set("#ff0000");
+// outlinePass.hiddenEdgeColor.set("#000000");
+
+var effectFXAA = new ShaderPass(FXAAShader);
+effectFXAA.uniforms["resolution"].value.set(1 / sizes.width, 1 / sizes.height);
+composer.addPass(effectFXAA);
 
 // const updateOnScroll = (event) => {
 //   mesh.rotation.y = window.scrollY * 0.01;
@@ -457,6 +544,21 @@ effect = new OutlineEffect(renderer);
 // };
 // window.addEventListener("scroll", updateOnScroll);
 
+document.addEventListener("mousemove", onDocumentMouseMove);
+
+let mouseX = 0;
+let mouseY = 0;
+
+let targetX = 0;
+let targetY = 0;
+
+const windowX = window.innerWidth / 2;
+const windowY = window.innerHeight / 2;
+
+function onDocumentMouseMove(event) {
+  mouseX = event.clientX - windowX;
+  mouseY = event.clientY - windowY;
+}
 const clock = new THREE.Clock();
 
 const tick = () => {
@@ -470,10 +572,24 @@ const tick = () => {
   //controls.update();
 
   // Render
-  effect.render(scene, camera);
 
+  //composer.render();
   // Call tick again on the next frame
   window.requestAnimationFrame(tick);
+
+  //Update objects
+  targetX = mouseX * 0.0001;
+  targetY = mouseY * 0.0001;
+
+  // Update objects
+  obj1.rotation.y += Math.PI * (targetX - obj1.rotation.y);
+  obj1.rotation.x += targetY - obj1.rotation.x;
+  // obj1.rotation.y += -Math.PI / 4 + 5 * (targetX - obj1.rotation.y);
+  // obj1.rotation.x += 0.5 * (targetX - obj1.rotation.x);
+  mesh.rotation.y += Math.PI * (targetX - mesh.rotation.y);
+  mesh.rotation.x += targetY - mesh.rotation.x;
+
+  effect.render(scene, camera);
 };
 window.scrollTo({ top: 0, behavior: "smooth" });
 
