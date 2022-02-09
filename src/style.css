@@ -323,7 +323,7 @@ body {
   align-items: right;
   display: grid;
   color: white;
-  right: 3vw;
+  right: 5vw;
 }
 .sect2-left h1 {
   font-size: 150px;
@@ -345,7 +345,7 @@ body {
   align-items: left;
   display: grid;
   left: 0;
-  margin-left: 30px;
+  margin-left: 60px;
   color: white;
   margin-top: 400px;
   font-size: 22px;
@@ -423,7 +423,7 @@ body {
   align-items: right;
   display: grid;
   color: white;
-  right: 3vw;
+  right: 5vw;
 }
 .sect4-left h1 {
   font-size: 150px;
@@ -437,7 +437,7 @@ body {
 }
 .sect4-left div {
   font-size: 22px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .sect4-right {
@@ -445,7 +445,7 @@ body {
   align-items: left;
   display: grid;
   left: 0;
-  margin-left: 30px;
+  margin-left: 60px;
   color: white;
   margin-top: 400px;
   font-size: 22px;
@@ -517,8 +517,25 @@ body {
   height: 90vh;
   background: rgb(255, 255, 255);
 }
+.sect6 div {
+  position: absolute;
+  align-items: center;
+  display: grid;
+  margin-top: 220px;
+  margin-left: 50px;
+  color: white;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.sect6 h1 {
+  font-size: 200px;
+}
 
 .sect7 {
   height: 10vh;
   background: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
