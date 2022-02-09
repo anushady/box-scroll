@@ -261,6 +261,50 @@ body {
   height: 90vh;
   background: rgb(18, 225, 144);
 }
+.sect1-left {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  color: white;
+  left: 3vw;
+}
+.sect1-left h1 {
+  font-size: 150px;
+}
+.sect1-left h2 {
+  font-size: 40px;
+  color: rgb(18, 225, 144);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: -24px;
+  margin-left: 5px;
+}
+.sect1-left div {
+  font-size: 22px;
+  margin-left: 5px;
+}
+.line1 {
+  position: absolute;
+  display: flex;
+  left: 3vw;
+  top: 150%;
+  width: 400px;
+  height: 50px;
+  color: white;
+}
+.sect1-right {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  right: 0;
+  color: white;
+  margin-top: 500px;
+  font-size: 22px;
+}
+.sect1-right {
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .sect1a {
   height: 40vh;
   background: rgb(46, 192, 236);
@@ -273,6 +317,43 @@ body {
 .sect2 {
   height: 90vh;
   background: rgb(46, 192, 236);
+}
+.sect2-left {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  color: white;
+  right: 3vw;
+}
+.sect2-left h1 {
+  font-size: 150px;
+}
+.sect2-left h2 {
+  font-size: 40px;
+  color: rgb(46, 192, 236);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: -24px;
+  margin-left: 5px;
+}
+.sect2-left div {
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.sect2-right {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  left: 0;
+  margin-left: 30px;
+  color: white;
+  margin-top: 400px;
+  font-size: 22px;
+}
+.sect2-right {
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .sect2a {
   height: 40vh;
@@ -287,6 +368,43 @@ body {
   height: 90vh;
   background: rgb(227, 82, 231);
 }
+.sect3-left {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  color: white;
+  left: 3vw;
+}
+.sect3-left h1 {
+  font-size: 150px;
+  margin-top: 100px;
+}
+.sect3-left h2 {
+  font-size: 40px;
+  color: rgb(227, 82, 231);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: -24px;
+  margin-left: 5px;
+}
+.sect3-left div {
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.sect3-right {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  right: 0;
+  color: white;
+  margin-top: 250px;
+  font-size: 22px;
+}
+.sect3-right {
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .sect3a {
   height: 40vh;
   background: rgb(255, 157, 11);
@@ -300,6 +418,43 @@ body {
   height: 90vh;
   background: rgb(255, 157, 11);
 }
+.sect4-left {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  color: white;
+  right: 3vw;
+}
+.sect4-left h1 {
+  font-size: 150px;
+}
+.sect4-left h2 {
+  font-size: 40px;
+  color: rgb(255, 157, 11);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: -24px;
+  margin-left: 5px;
+}
+.sect4-left div {
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.sect4-right {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  left: 0;
+  margin-left: 30px;
+  color: white;
+  margin-top: 400px;
+  font-size: 22px;
+}
+.sect4-right {
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .sect4a {
   height: 40vh;
   background: rgb(241, 226, 6);
@@ -312,6 +467,42 @@ body {
 .sect5 {
   height: 90vh;
   background: rgb(241, 226, 6);
+}
+.sect5-left {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  color: white;
+  left: 3vw;
+}
+.sect5-left h1 {
+  font-size: 150px;
+}
+.sect5-left h2 {
+  font-size: 40px;
+  color: rgb(241, 226, 6);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: -24px;
+  margin-left: 5px;
+}
+.sect5-left div {
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.sect5-right {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  right: 0;
+  color: white;
+  margin-top: 400px;
+  font-size: 22px;
+}
+.sect5-right {
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .sect5a {
   height: 40vh;
