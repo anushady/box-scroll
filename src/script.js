@@ -61,6 +61,17 @@ function togglec() {
   tl.reverse();
 }
 
+// gsap
+
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sect1",
+  },
+});
+
+tl2.from("#sect1h1", { x: -200, opacity: 0.6, duration: 1 });
+tl2.from("#sect1h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
 
