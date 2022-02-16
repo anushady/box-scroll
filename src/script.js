@@ -101,6 +101,12 @@ let tl4 = gsap.timeline({
 
 tl4.from("#sect3h1", { x: -200, opacity: 0.6, duration: 1 });
 tl4.from("#sect3h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl5 = gsap.timeline({
   scrollTrigger: {
@@ -110,6 +116,13 @@ let tl5 = gsap.timeline({
 
 tl5.from("#sect4h1", { x: -200, opacity: 0.6, duration: 1 });
 tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl6 = gsap.timeline({
   scrollTrigger: {
@@ -119,6 +132,12 @@ let tl6 = gsap.timeline({
 
 tl6.from("#sect5h1", { x: -200, opacity: 0.6, duration: 1 });
 tl6.from("#sect5h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
