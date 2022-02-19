@@ -71,12 +71,12 @@ let tl2 = gsap.timeline({
 
 tl2.from("#sect1h1", { x: -200, opacity: 0.6, duration: 1 });
 tl2.from("#sect1h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#a16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl3 = gsap.timeline({
   scrollTrigger: {
@@ -86,12 +86,12 @@ let tl3 = gsap.timeline({
 
 tl3.from("#sect2h1", { x: -200, opacity: 0.6, duration: 1 });
 tl3.from("#sect2h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#b16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl4 = gsap.timeline({
   scrollTrigger: {
@@ -101,12 +101,12 @@ let tl4 = gsap.timeline({
 
 tl4.from("#sect3h1", { x: -200, opacity: 0.6, duration: 1 });
 tl4.from("#sect3h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#c16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl5 = gsap.timeline({
   scrollTrigger: {
@@ -116,13 +116,12 @@ let tl5 = gsap.timeline({
 
 tl5.from("#sect4h1", { x: -200, opacity: 0.6, duration: 1 });
 tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#d16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
 
 let tl6 = gsap.timeline({
   scrollTrigger: {
@@ -132,12 +131,166 @@ let tl6 = gsap.timeline({
 
 tl6.from("#sect5h1", { x: -200, opacity: 0.6, duration: 1 });
 tl6.from("#sect5h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e11", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e12", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e13", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e14", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e15", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e16", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#e16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+
+// trigger
+
+var action = gsap.to(".sect1", {
+  background: "rgb(18, 225, 144)",
+  ease: "none",
+  duration: 0.25,
+  zIndex: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".sect1",
+  start: "top top",
+  endTrigger: ".sect2",
+  end: "top top",
+  markers: true,
+  pin: true,
+  pinSpacing: false,
+  animation: action,
+  toggleActions: "play reverse play reverse",
+});
+
+var action2 = gsap.to(".sect2", {
+  background: "rgb(46, 192, 236)",
+  ease: "none",
+  duration: 0.25,
+  zIndex: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".sect2",
+  start: "top top",
+  endTrigger: ".sect3",
+  end: "top top",
+  markers: true,
+  pin: true,
+  pinSpacing: false,
+  animation: action2,
+  toggleActions: "play reverse play reverse",
+});
+
+var action3 = gsap.to(".sect3", {
+  background: "rgb(227, 82, 231)",
+  ease: "none",
+  duration: 0.25,
+  zIndex: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".sect3",
+  start: "top top",
+  endTrigger: ".sect4",
+  end: "top top",
+  markers: true,
+  pin: true,
+  pinSpacing: false,
+  animation: action3,
+  toggleActions: "play reverse play reverse",
+});
+
+var action4 = gsap.to(".sect4", {
+  background: "rgb(255, 157, 11)",
+  ease: "none",
+  duration: 0.25,
+  zIndex: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".sect4",
+  start: "top top",
+  endTrigger: ".sect5",
+  end: "top top",
+  markers: true,
+  pin: true,
+  pinSpacing: false,
+  animation: action4,
+  toggleActions: "play reverse play reverse",
+});
+
+var action5 = gsap.to(".sect5", {
+  background: "rgb(241, 226, 6)",
+  ease: "none",
+  duration: 0.25,
+  zIndex: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".sect5",
+  start: "top top",
+  endTrigger: ".sect6",
+  end: "top top",
+  markers: true,
+  pin: true,
+  pinSpacing: false,
+  animation: action5,
+  toggleActions: "play reverse play reverse",
+});
+
+// ScrollTrigger.create({
+//   trigger: "#scr",
+//   scrub: true,
+//   start: "top top",
+//   end: "bottom bottom",
+
+//   onUpdate: (self) => {
+//     obj1.rotation.y = 0.000000000005 * self.progress;
+//   },
+// });
+
+// gsap.from(
+//   {
+//     if(obj1) {
+//       obj1.position;
+//     },
+//   },
+//   {
+//     x: 1,
+//     duration: 1,
+//     ease: "expo",
+//   }
+// );
+// gsap.from(".logo", {
+//   yPercent: 100,
+//   autoAlpha: 0,
+//   ease: "back",
+//   delay: 0.3,
+// });
+// gsap.to({
+//   if(obj1) {
+//     obj1.position;
+//   },
+// }, {
+//   x: Math.PI * 2,
+//   scrollTrigger: {
+//     trigger: ".sect1",
+//   },
+// });
+// gsap.to({
+//   if(obj1) {
+//     obj1.;
+//   },
+// }, {
+//   x: 2,
+//   y: 2,
+//   scrollTrigger: {
+//     trigger: ".sect2",
+//   },
+// });
+// gsap.to(obj1.rotation, {
+//   y: Math.PI * 2,
+//   scrollTrigger: {
+//     trigger: ".sect3",
+//   },
+// });
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -667,6 +820,6 @@ const tick = () => {
 
   effect.render(scene, camera);
 };
-window.scrollTo({ top: 0, behavior: "smooth" });
+//window.scrollTo({ top: 0, behavior: "smooth" });
 
 tick();
