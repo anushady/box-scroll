@@ -21,6 +21,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 /* Nav bar */
@@ -199,6 +200,7 @@ body {
 }
 .sect {
   height: 90vh;
+  display: block;
 }
 .sect h1 {
   position: absolute;
@@ -248,18 +250,18 @@ body {
   width: 765px;
 }
 
-.secta {
+/* .secta {
   height: 40vh;
-  background: rgb(18, 225, 144);
+  /* background: rgb(18, 225, 144);
   background: linear-gradient(
     0deg,
     rgba(18, 225, 144, 1) 0%,
     rgba(255, 255, 255, 1) 100%
-  );
-}
+  ); */
+/* } */
 .sect1 {
-  height: 90vh;
-  background: rgb(18, 225, 144);
+  height: 200vh;
+  /* background: rgb(18, 225, 144); */
 }
 .sect1-left {
   position: absolute;
@@ -284,7 +286,6 @@ body {
 }
 .line1 {
   position: absolute;
-  display: flex;
   left: 3vw;
   top: 150%;
   width: 400px;
@@ -305,18 +306,18 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.sect1a {
+/* .sect1a {
   height: 40vh;
-  background: rgb(46, 192, 236);
+  /* background: rgb(46, 192, 236);
   background: linear-gradient(
     0deg,
     rgba(46, 192, 236, 1) 0%,
     rgba(18, 225, 144, 1) 100%
-  );
-}
+  ); */
+
 .sect2 {
-  height: 90vh;
-  background: rgb(46, 192, 236);
+  height: 200vh;
+  /* background: rgb(46, 192, 236); */
 }
 .sect2-left {
   position: absolute;
@@ -339,7 +340,6 @@ body {
   font-size: 22px;
   margin-left: 5px;
 }
-
 .sect2-right {
   position: absolute;
   align-items: left;
@@ -355,18 +355,18 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.sect2a {
+/* .sect2a {
   height: 40vh;
-  background: rgb(227, 82, 231);
+  /* background: rgb(227, 82, 231);
   background: linear-gradient(
     0deg,
     rgba(227, 82, 231, 1) 0%,
     rgba(46, 192, 236, 1) 100%
-  );
-}
+  ); */
+/* } */
 .sect3 {
-  height: 90vh;
-  background: rgb(227, 82, 231);
+  height: 200vh;
+  /* background: rgb(227, 82, 231); */
 }
 .sect3-left {
   position: absolute;
@@ -405,18 +405,18 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.sect3a {
+/* .sect3a {
   height: 40vh;
-  background: rgb(255, 157, 11);
+  /* background: rgb(255, 157, 11);
   background: linear-gradient(
     0deg,
     rgb(255, 157, 11) 0%,
     rgba(227, 82, 231, 1) 100%
-  );
-}
+  ); */
+/* } */
 .sect4 {
-  height: 90vh;
-  background: rgb(255, 157, 11);
+  height: 200vh;
+  /* background: rgb(255, 157, 11); */
 }
 .sect4-left {
   position: absolute;
@@ -455,18 +455,18 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.sect4a {
+/* .sect4a {
   height: 40vh;
-  background: rgb(241, 226, 6);
+  /* background: rgb(241, 226, 6);
   background: linear-gradient(
     0deg,
     rgba(241, 226, 6, 1) 0%,
     rgb(255, 157, 11) 100%
-  );
-}
+  ); */
+/* } */
 .sect5 {
-  height: 90vh;
-  background: rgb(241, 226, 6);
+  height: 200vh;
+  /* background: rgb(241, 226, 6); */
 }
 .sect5-left {
   position: absolute;
@@ -504,24 +504,24 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.sect5a {
+/* .sect5a {
   height: 40vh;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(241, 226, 6, 1) 100%
-  );
-}
+  ); */
+/* } */
 .sect6 {
-  height: 90vh;
-  background: rgb(255, 255, 255);
+  height: 200vh;
+  /* background: rgb(255, 255, 255); */
 }
 .sect6 div {
   position: absolute;
   align-items: center;
   display: grid;
-  margin-top: 220px;
+  margin-top: 135vh;
   margin-left: 50px;
   color: white;
   -webkit-text-stroke: 1px rgb(0, 0, 0);
