@@ -15,13 +15,14 @@ body {
   height: 100vh;
   font-family: "GTFlexa-Black", sans-serif;
   scroll-behavior: smooth;
+  background: white;
 }
 
 .webgl {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Nav bar */
@@ -55,7 +56,7 @@ body {
   background-color: black;
 
   transform: translateX(-100%);
-  z-index: 2;
+  z-index: 20;
 }
 .menu .button {
   color: white;
@@ -199,7 +200,7 @@ body {
   width: 88vw;
 }
 .sect {
-  height: 90vh;
+  height: 100vh;
   display: block;
 }
 .sect h1 {
@@ -226,7 +227,7 @@ body {
   display: flex;
   top: 70%;
   left: 5vw;
-  z-index: -1;
+  z-index: 0;
 }
 .green {
   background: rgb(18, 225, 144);
@@ -261,6 +262,7 @@ body {
 /* } */
 .sect1 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(18, 225, 144); */
 }
 .sect1-left {
@@ -275,7 +277,7 @@ body {
 }
 .sect1-left h2 {
   font-size: 40px;
-  color: rgb(18, 225, 144);
+  color: "white";
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   margin-top: -24px;
   margin-left: 5px;
@@ -291,6 +293,7 @@ body {
   width: 400px;
   height: 50px;
   color: white;
+  z-index: 1;
 }
 .sect1-right {
   position: absolute;
@@ -317,6 +320,7 @@ body {
 
 .sect2 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(46, 192, 236); */
 }
 .sect2-left {
@@ -366,6 +370,7 @@ body {
 /* } */
 .sect3 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(227, 82, 231); */
 }
 .sect3-left {
@@ -416,6 +421,7 @@ body {
 /* } */
 .sect4 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(255, 157, 11); */
 }
 .sect4-left {
@@ -466,6 +472,7 @@ body {
 /* } */
 .sect5 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(241, 226, 6); */
 }
 .sect5-left {
@@ -515,6 +522,7 @@ body {
 /* } */
 .sect6 {
   height: 200vh;
+  z-index: -1;
   /* background: rgb(255, 255, 255); */
 }
 .sect6 div {
