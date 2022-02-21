@@ -66,84 +66,106 @@ function togglec() {
 let tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect1",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    toggleActions: "play reverse play reverse",
   },
 });
 
-tl2.from("#sect1h1", { x: -200, opacity: 0.6, duration: 1 });
-tl2.from("#sect1h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl2.from("#a16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl2.from("#sect1h1", { x: -200, opacity: 0, duration: 1 });
+tl2.from("#sect1h2", { x: 200, opacity: 0, duration: 1 });
+tl2.from("#a11", { x: 200, opacity: 0, duration: 1 });
+tl2.from("#a12", { x: 200, opacity: 0, duration: 1 });
+tl2.from("#a13", { x: 200, opacity: 0, duration: 1 });
+tl2.from("#a14", { x: -200, opacity: 0, duration: 1 });
+tl2.from("#a15", { x: -200, opacity: 0, duration: 1 });
+tl2.from("#a16", { x: -200, opacity: 0, duration: 1 });
 
 let tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect2",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    toggleActions: "play reverse play reverse",
   },
 });
 
-tl3.from("#sect2h1", { x: -200, opacity: 0.6, duration: 1 });
-tl3.from("#sect2h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl3.from("#b16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl3.from("#sect2h1", { x: -200, opacity: 0, duration: 1 });
+tl3.from("#sect2h2", { x: 200, opacity: 0, duration: 1 });
+tl3.from("#b11", { x: 200, opacity: 0, duration: 1 });
+tl3.from("#b12", { x: 200, opacity: 0, duration: 1 });
+tl3.from("#b13", { x: 200, opacity: 0, duration: 1 });
+tl3.from("#b14", { x: -200, opacity: 0, duration: 1 });
+tl3.from("#b15", { x: -200, opacity: 0, duration: 1 });
+tl3.from("#b16", { x: -200, opacity: 0, duration: 1 });
 
 let tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect3",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    toggleActions: "play reverse play reverse",
   },
 });
 
-tl4.from("#sect3h1", { x: -200, opacity: 0.6, duration: 1 });
-tl4.from("#sect3h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl4.from("#c16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl4.from("#sect3h1", { x: -200, opacity: 0, duration: 1 });
+tl4.from("#sect3h2", { x: 200, opacity: 0, duration: 1 });
+tl4.from("#c11", { x: 200, opacity: 0, duration: 1 });
+tl4.from("#c12", { x: 200, opacity: 0, duration: 1 });
+tl4.from("#c13", { x: 200, opacity: 0, duration: 1 });
+tl4.from("#c14", { x: -200, opacity: 0, duration: 1 });
+tl4.from("#c15", { x: -200, opacity: 0, duration: 1 });
+tl4.from("#c16", { x: -200, opacity: 0, duration: 1 });
 
 let tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect4",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    toggleActions: "play reverse play reverse",
   },
 });
 
-tl5.from("#sect4h1", { x: -200, opacity: 0.6, duration: 1 });
-tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl5.from("#d16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl5.from("#sect4h1", { x: -200, opacity: 0, duration: 1 });
+tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 });
+tl5.from("#d11", { x: 200, opacity: 0, duration: 1 });
+tl5.from("#d12", { x: 200, opacity: 0, duration: 1 });
+tl5.from("#d13", { x: 200, opacity: 0, duration: 1 });
+tl5.from("#d14", { x: -200, opacity: 0, duration: 1 });
+tl5.from("#d15", { x: -200, opacity: 0, duration: 1 });
+tl5.from("#d16", { x: -200, opacity: 0, duration: 1 });
 
 let tl6 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect5",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    toggleActions: "play reverse play reverse",
   },
 });
 
-tl6.from("#sect5h1", { x: -200, opacity: 0.6, duration: 1 });
-tl6.from("#sect5h2", { x: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e11", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e12", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e13", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e14", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e15", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
-tl6.from("#e16", { y: 200, opacity: 0, duration: 1 }, "-=0.4");
+tl6.from("#sect5h1", { x: -200, opacity: 0, duration: 1 });
+tl6.from("#sect5h2", { x: 200, opacity: 0, duration: 1 });
+tl6.from("#e11", { x: 200, opacity: 0, duration: 1 });
+tl6.from("#e12", { x: 200, opacity: 0, duration: 1 });
+tl6.from("#e13", { x: 200, opacity: 0, duration: 1 });
+tl6.from("#e14", { x: -200, opacity: 0, duration: 1 });
+tl6.from("#e15", { x: -200, opacity: 0, duration: 1 });
+tl6.from("#e16", { x: -200, opacity: 0, duration: 1 });
+
+// trigger
 
 // trigger
 
 var action = gsap.to(".sect1", {
   background: "rgb(18, 225, 144)",
   ease: "none",
-  duration: 0.25,
+  duration: 0.1,
   zIndex: 0,
 });
 
