@@ -68,95 +68,95 @@ let tl2 = gsap.timeline({
     trigger: ".sect1",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 3,
     toggleActions: "play reverse play reverse",
   },
 });
 
-tl2.from("#sect1h1", { x: -200, opacity: 0, duration: 1 });
-tl2.from("#sect1h2", { x: 200, opacity: 0, duration: 1 });
-tl2.from("#a11", { x: 200, opacity: 0, duration: 1 });
-tl2.from("#a12", { x: 200, opacity: 0, duration: 1 });
-tl2.from("#a13", { x: 200, opacity: 0, duration: 1 });
-tl2.from("#a14", { x: -200, opacity: 0, duration: 1 });
-tl2.from("#a15", { x: -200, opacity: 0, duration: 1 });
-tl2.from("#a16", { x: -200, opacity: 0, duration: 1 });
+tl2.from("#sect1h1", { x: -1000, opacity: 0, duration: 10 });
+tl2.from("#sect1h2", { x: 600, opacity: 0, duration: 10 });
+tl2.from("#a11", { x: 600, opacity: 0, duration: 10 });
+tl2.from("#a12", { x: 600, opacity: 0, duration: 10 });
+tl2.from("#a13", { x: 600, opacity: 0, duration: 10 });
+tl2.from("#a14", { x: -600, opacity: 0, duration: 10 });
+tl2.from("#a15", { x: -600, opacity: 0, duration: 10 });
+tl2.from("#a16", { x: -600, opacity: 0, duration: 10 });
 
 let tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect2",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 3,
     toggleActions: "play reverse play reverse",
   },
 });
 
-tl3.from("#sect2h1", { x: -200, opacity: 0, duration: 1 });
-tl3.from("#sect2h2", { x: 200, opacity: 0, duration: 1 });
-tl3.from("#b11", { x: 200, opacity: 0, duration: 1 });
-tl3.from("#b12", { x: 200, opacity: 0, duration: 1 });
-tl3.from("#b13", { x: 200, opacity: 0, duration: 1 });
-tl3.from("#b14", { x: -200, opacity: 0, duration: 1 });
-tl3.from("#b15", { x: -200, opacity: 0, duration: 1 });
-tl3.from("#b16", { x: -200, opacity: 0, duration: 1 });
+tl3.from("#sect2h1", { x: -1000, opacity: 0, duration: 10 });
+tl3.from("#sect2h2", { x: 600, opacity: 0, duration: 10 });
+tl3.from("#b11", { x: 600, opacity: 0, duration: 10 });
+tl3.from("#b12", { x: 600, opacity: 0, duration: 10 });
+tl3.from("#b13", { x: 600, opacity: 0, duration: 10 });
+tl3.from("#b14", { x: -600, opacity: 0, duration: 10 });
+tl3.from("#b15", { x: -600, opacity: 0, duration: 10 });
+tl3.from("#b16", { x: -600, opacity: 0, duration: 10 });
 
 let tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect3",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 3,
     toggleActions: "play reverse play reverse",
   },
 });
 
-tl4.from("#sect3h1", { x: -200, opacity: 0, duration: 1 });
-tl4.from("#sect3h2", { x: 200, opacity: 0, duration: 1 });
-tl4.from("#c11", { x: 200, opacity: 0, duration: 1 });
-tl4.from("#c12", { x: 200, opacity: 0, duration: 1 });
-tl4.from("#c13", { x: 200, opacity: 0, duration: 1 });
-tl4.from("#c14", { x: -200, opacity: 0, duration: 1 });
-tl4.from("#c15", { x: -200, opacity: 0, duration: 1 });
-tl4.from("#c16", { x: -200, opacity: 0, duration: 1 });
+tl4.from("#sect3h1", { x: 1000, opacity: 0, duration: 10 });
+tl4.from("#sect3h2", { x: 600, opacity: 0, duration: 10 });
+tl4.from("#c11", { x: 600, opacity: 0, duration: 10 });
+tl4.from("#c12", { x: 600, opacity: 0, duration: 10 });
+tl4.from("#c13", { x: 600, opacity: 0, duration: 10 });
+tl4.from("#c14", { x: -600, opacity: 0, duration: 10 });
+tl4.from("#c15", { x: -600, opacity: 0, duration: 10 });
+tl4.from("#c16", { x: -600, opacity: 0, duration: 10 });
 
 let tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect4",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 3,
     toggleActions: "play reverse play reverse",
   },
 });
 
-tl5.from("#sect4h1", { x: -200, opacity: 0, duration: 1 });
-tl5.from("#sect4h2", { x: 200, opacity: 0, duration: 1 });
-tl5.from("#d11", { x: 200, opacity: 0, duration: 1 });
-tl5.from("#d12", { x: 200, opacity: 0, duration: 1 });
-tl5.from("#d13", { x: 200, opacity: 0, duration: 1 });
-tl5.from("#d14", { x: -200, opacity: 0, duration: 1 });
-tl5.from("#d15", { x: -200, opacity: 0, duration: 1 });
-tl5.from("#d16", { x: -200, opacity: 0, duration: 1 });
+tl5.from("#sect4h1", { x: -1000, opacity: 0, duration: 10 });
+tl5.from("#sect4h2", { x: 600, opacity: 0, duration: 10 });
+tl5.from("#d11", { x: 600, opacity: 0, duration: 10 });
+tl5.from("#d12", { x: 600, opacity: 0, duration: 10 });
+tl5.from("#d13", { x: 600, opacity: 0, duration: 10 });
+tl5.from("#d14", { x: -600, opacity: 0, duration: 10 });
+tl5.from("#d15", { x: -600, opacity: 0, duration: 10 });
+tl5.from("#d16", { x: -600, opacity: 0, duration: 10 });
 
 let tl6 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sect5",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 3,
     toggleActions: "play reverse play reverse",
   },
 });
 
-tl6.from("#sect5h1", { x: -200, opacity: 0, duration: 1 });
-tl6.from("#sect5h2", { x: 200, opacity: 0, duration: 1 });
-tl6.from("#e11", { x: 200, opacity: 0, duration: 1 });
-tl6.from("#e12", { x: 200, opacity: 0, duration: 1 });
-tl6.from("#e13", { x: 200, opacity: 0, duration: 1 });
-tl6.from("#e14", { x: -200, opacity: 0, duration: 1 });
-tl6.from("#e15", { x: -200, opacity: 0, duration: 1 });
-tl6.from("#e16", { x: -200, opacity: 0, duration: 1 });
+tl6.from("#sect5h1", { x: 1000, opacity: 0, duration: 10 });
+tl6.from("#sect5h2", { x: 600, opacity: 0, duration: 10 });
+tl6.from("#e11", { x: 600, opacity: 0, duration: 10 });
+tl6.from("#e12", { x: 600, opacity: 0, duration: 10 });
+tl6.from("#e13", { x: 600, opacity: 0, duration: 10 });
+tl6.from("#e14", { x: -600, opacity: 0, duration: 10 });
+tl6.from("#e15", { x: -600, opacity: 0, duration: 10 });
+tl6.from("#e16", { x: -600, opacity: 0, duration: 10 });
 
 // trigger
 
@@ -174,7 +174,7 @@ ScrollTrigger.create({
   start: "top top",
   endTrigger: ".sect2",
   end: "top top",
-  markers: true,
+  //markers: true,
   pin: true,
   pinSpacing: false,
   animation: action,
@@ -193,7 +193,7 @@ ScrollTrigger.create({
   start: "top top",
   endTrigger: ".sect3",
   end: "top top",
-  markers: true,
+  //markers: true,
   pin: true,
   pinSpacing: false,
   animation: action2,
@@ -212,7 +212,7 @@ ScrollTrigger.create({
   start: "top top",
   endTrigger: ".sect4",
   end: "top top",
-  markers: true,
+  //markers: true,
   pin: true,
   pinSpacing: false,
   animation: action3,
@@ -231,7 +231,7 @@ ScrollTrigger.create({
   start: "top top",
   endTrigger: ".sect5",
   end: "top top",
-  markers: true,
+  //markers: true,
   pin: true,
   pinSpacing: false,
   animation: action4,
@@ -250,7 +250,7 @@ ScrollTrigger.create({
   start: "top top",
   endTrigger: ".sect6",
   end: "top top",
-  markers: true,
+  //markers: true,
   pin: true,
   pinSpacing: false,
   animation: action5,
@@ -664,56 +664,72 @@ animationScripts.push({
 });
 animationScripts.push({
   start: 5,
+  end: 8,
+  func: function () {
+    //camera.lookAt(obj1.position);
+
+    material.color.set(0xdddddd);
+
+    mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
+    if (obj1) obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
+    //camera.position.set(0, 1, 2);
+    //mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
+    //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
+    //console.log(cube.position.z)
+  },
+});
+animationScripts.push({
+  start: 8,
   end: 24,
   func: function () {
     //camera.lookAt(obj1.position);
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0x12e190);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(5, 24));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(5, 24));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
 });
 animationScripts.push({
   start: 24,
-  end: 42,
+  end: 41,
   func: function () {
     //camera.lookAt(obj1.position);
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0x2ec0ec);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 42));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 42));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
 });
 animationScripts.push({
-  start: 42,
-  end: 56,
+  start: 41,
+  end: 58,
   func: function () {
     //camera.lookAt(obj1.position);
     //mesh.position.x = lerp(900, 0, scalePercent(42, 20));
     material.color.set(0xe352e7);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 56));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 56));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
 });
 animationScripts.push({
-  start: 56,
-  end: 72,
+  start: 58,
+  end: 74,
   func: function () {
     //camera.lookAt(obj1.position);
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0xf18b06);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 72));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 72));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
@@ -721,19 +737,19 @@ animationScripts.push({
 
 //add an animation that rotates the obj1 between 40-60 percent of scroll
 animationScripts.push({
-  start: 72,
-  end: 90,
+  start: 74,
+  end: 91,
   func: function () {
     material.color.set(0xf1e206);
     //camera.lookAt(obj1.position);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 90));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 90));
+    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
+    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
     //console.log(obj1.rotation.z)
   },
 });
 animationScripts.push({
-  start: 90,
+  start: 91,
   end: 100.1,
   func: function () {
     material.color.set(0xeeeeee);
