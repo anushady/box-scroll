@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -28,7 +29,7 @@ body {
 /* Nav bar */
 .container {
   position: absolute;
-  overflow: hidden;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -263,6 +264,7 @@ body {
 .sect1 {
   height: 200vh;
   z-index: -1;
+  position: relative;
   /* background: rgb(18, 225, 144); */
 }
 .sect1-left {
@@ -305,7 +307,7 @@ body {
   font-size: 22px;
 }
 .sect1-right {
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -321,6 +323,7 @@ body {
 .sect2 {
   height: 200vh;
   z-index: -1;
+  position: relative;
   /* background: rgb(46, 192, 236); */
 }
 .sect2-left {
@@ -355,7 +358,7 @@ body {
   font-size: 22px;
 }
 .sect2-right {
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -371,6 +374,7 @@ body {
 .sect3 {
   height: 200vh;
   z-index: -1;
+  position: relative;
   /* background: rgb(227, 82, 231); */
 }
 .sect3-left {
@@ -389,7 +393,6 @@ body {
   color: rgb(227, 82, 231);
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   margin-top: -24px;
-  margin-left: 5px;
 }
 .sect3-left div {
   font-size: 22px;
@@ -400,13 +403,13 @@ body {
   position: absolute;
   align-items: right;
   display: grid;
-  right: 0;
+  right: 20px;
   color: white;
   margin-top: 250px;
   font-size: 22px;
 }
 .sect3-right {
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -422,6 +425,7 @@ body {
 .sect4 {
   height: 200vh;
   z-index: -1;
+  position: relative;
   /* background: rgb(255, 157, 11); */
 }
 .sect4-left {
@@ -457,7 +461,7 @@ body {
   font-size: 22px;
 }
 .sect4-right {
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -473,6 +477,7 @@ body {
 .sect5 {
   height: 200vh;
   z-index: -1;
+  position: relative;
   /* background: rgb(241, 226, 6); */
 }
 .sect5-left {
@@ -501,13 +506,13 @@ body {
   position: absolute;
   align-items: right;
   display: grid;
-  right: 0;
+  right: 10px;
   color: white;
   margin-top: 400px;
   font-size: 22px;
 }
 .sect5-right {
-  padding-right: 30px;
+  /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -522,15 +527,19 @@ body {
 /* } */
 .sect6 {
   height: 200vh;
-  z-index: -1;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background: rgb(255, 255, 255); */
 }
-.sect6 div {
+#sh {
   position: absolute;
   align-items: center;
   display: grid;
-  margin-top: 135vh;
-  margin-left: 50px;
+  left: 5vw;
+  bottom: 30vh;
   color: white;
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
@@ -546,4 +555,95 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 40vw;
+  bottom: 20vh;
+}
+
+.cta {
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background: #3e1c87;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #fbc638;
+  }
+  100% {
+    fill: white;
+  }
 }
