@@ -330,7 +330,7 @@ loader.load(
     obj1 = gltf.scene;
     scene.add(obj1);
 
-    obj1.scale.set(450, 450, 450);
+    obj1.scale.set(420, 420, 420);
     obj1.rotation.set(0, 0, 0);
     obj1.position.set(0, 0, -300);
   }
@@ -457,7 +457,7 @@ renderer.shadowMap.enabled = true;
  *
  */
 
-const triangles = 2000;
+const triangles = 1500;
 
 const geometry = new THREE.BufferGeometry();
 
@@ -467,9 +467,9 @@ const colors = [];
 
 const color = new THREE.Color();
 
-const n = 800,
+const n = 700,
   n2 = n / 2; // triangles spread in the cube
-const d = 120,
+const d = 200,
   d2 = d / 2; // individual triangle size
 
 const pA = new THREE.Vector3();
@@ -649,13 +649,15 @@ animationScripts.push({
   end: 5,
   func: function () {
     //camera.lookAt(obj1.position);
-    mesh.position.x = lerp(1000, 0, scalePercent(0, 5));
-    if (obj1) obj1.position.x = lerp(1000, 0, scalePercent(0, 5));
+    if (mesh && obj1) mesh.position.x = lerp(1000, 0, scalePercent(0, 5));
+    if (mesh && obj1) obj1.position.x = lerp(1000, 0, scalePercent(0, 5));
 
     material.color.set(0xdddddd);
 
-    mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
-    if (obj1) obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(0, 5));
     //camera.position.set(0, 1, 2);
     //mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
@@ -670,8 +672,10 @@ animationScripts.push({
 
     material.color.set(0xdddddd);
 
-    mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
-    if (obj1) obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 3 * Math.PI, scalePercent(5, 8));
     //camera.position.set(0, 1, 2);
     //mesh.rotation.y = lerp(0, 4 * Math.PI, scalePercent(20, 100));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
@@ -686,8 +690,10 @@ animationScripts.push({
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0x12e190);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
+    if (obj1 && mesh)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(7, 24));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
@@ -700,8 +706,10 @@ animationScripts.push({
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0x2ec0ec);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(24, 41));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
@@ -714,8 +722,10 @@ animationScripts.push({
     //mesh.position.x = lerp(900, 0, scalePercent(42, 20));
     material.color.set(0xe352e7);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(42, 58));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
@@ -728,8 +738,10 @@ animationScripts.push({
     //mesh.position.x = lerp(900, 0, scalePercent(0, 20));
     material.color.set(0xf18b06);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(56, 74));
     //obj1.position.z = lerp(-5, 0, scalePercent(0, 40));
     //console.log(cube.position.z)
   },
@@ -743,8 +755,10 @@ animationScripts.push({
     material.color.set(0xf1e206);
     //camera.lookAt(obj1.position);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(72, 91));
     //console.log(obj1.rotation.z)
   },
 });
@@ -755,8 +769,10 @@ animationScripts.push({
     material.color.set(0xeeeeee);
     //camera.lookAt(obj1.position);
     //camera.position.set(0, 1, 2);
-    mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
-    if (obj1) obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
+    if (mesh && obj1)
+      mesh.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
+    if (mesh && obj1)
+      obj1.rotation.y = lerp(0, 2 * Math.PI, scalePercent(90, 100.1));
     //console.log(obj1.rotation.z)
   },
 });
