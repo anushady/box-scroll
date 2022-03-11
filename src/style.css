@@ -19,6 +19,25 @@ body {
   background: white;
 }
 
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
 .webgl {
   position: fixed;
   top: 0;
@@ -49,7 +68,7 @@ body {
 }
 .menu {
   position: absolute;
-  overflow: auto;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -61,6 +80,7 @@ body {
 }
 .menu .button {
   color: white;
+  overflow: hidden;
 }
 
 .icon {
@@ -303,13 +323,22 @@ body {
   display: grid;
   right: 0;
   color: white;
-  margin-top: 500px;
+  margin-top: 400px;
   font-size: 22px;
 }
 .sect1-right {
   /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
+}
+#a11,
+#a12,
+#a13,
+#a14,
+#a15,
+#a16 {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
 }
 /* .sect1a {
   height: 40vh;
@@ -362,6 +391,15 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
+#b11,
+#b12,
+#b13,
+#b14,
+#b15,
+#b16 {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
 /* .sect2a {
   height: 40vh;
   /* background: rgb(227, 82, 231);
@@ -413,6 +451,16 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
+#c11,
+#c12,
+#c13,
+#c14,
+#c15,
+#c16 {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
 /* .sect3a {
   height: 40vh;
   /* background: rgb(255, 157, 11);
@@ -465,6 +513,15 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 }
+#d11,
+#d12,
+#d13,
+#d14,
+#d15,
+#d16 {
+  border-bottom: 1.4px solid white;
+  padding-bottom: 10px;
+}
 /* .sect4a {
   height: 40vh;
   /* background: rgb(241, 226, 6);
@@ -515,6 +572,15 @@ body {
   /* padding-right: 30px; */
   padding-top: 70px;
   padding-bottom: 70px;
+}
+#e11,
+#e12,
+#e13,
+#e14,
+#e15,
+#e16 {
+  border-bottom: 1.6px solid white;
+  padding-bottom: 10px;
 }
 /* .sect5a {
   height: 40vh;
@@ -646,4 +712,125 @@ path.two {
   100% {
     fill: white;
   }
+}
+
+/****************** Reference ******************/
+/****************** Reference ******************/
+/****************** Reference ******************/
+/****************** Reference ******************/
+/****************** Reference ******************/
+
+.ref1 {
+  position: relative;
+  height: 50vh;
+  margin-top: 11vh;
+  margin-bottom: 11vh;
+}
+.ref1 img {
+  height: 50vh;
+  width: 100vw;
+}
+.ref1 h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  left: 5%;
+  top: 70%;
+}
+.ref2 {
+  position: relative;
+  height: 50vh;
+  margin-bottom: 11vh;
+}
+.ref2 img {
+  height: 50vh;
+  width: 100vw;
+}
+.ref2 h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  left: 5%;
+  top: 70%;
+}
+.ref3 {
+  position: relative;
+  height: 50vh;
+  margin-bottom: 11vh;
+}
+.ref3 img {
+  height: 50vh;
+  width: 100vw;
+}
+.ref3 h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  left: 5%;
+  top: 70%;
+}
+.ref4 {
+  position: relative;
+  height: 50vh;
+  margin-bottom: 1vh;
+}
+.ref4 img {
+  height: 50vh;
+  width: 100vw;
+}
+.ref4 h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  left: 5%;
+  top: 70%;
+}
+
+/****************** Ref1 ******************/
+/****************** Ref1 ******************/
+/****************** Ref1 ******************/
+/****************** Ref1 ******************/
+/****************** Ref1 ******************/
+
+.ref11 {
+  position: relative;
+  height: 100vh;
+  display: block;
+  margin-top: 15vh;
+}
+
+.ref11left {
+  position: absolute;
+  align-items: left;
+  display: grid;
+  left: 10%;
+}
+
+.ref11right {
+  position: absolute;
+  align-items: right;
+  display: grid;
+  right: 30%;
+}
+.ref11 .ref11left img {
+  width: 30vw;
+}
+.ref11next {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+}
+.ref11 button {
+  padding: 10px;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+  cursor: pointer;
+}
+.ref11 .ref11right p {
+  font-family: sans-serif;
+}
+.ref11 h1 {
+  font-size: 50px;
 }
