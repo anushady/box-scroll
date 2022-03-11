@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="/static/log.PNG" alt="xxxx">
+    </div>
+    <div id="line"></div>
+    </div>
+    <div class="container">
+        <div class="button"><img class="icon" src="/static/menu100.PNG" alt="menu"></div>
+
+    </div>
+    <div class="menu">
+        
+        <div class="button"><img class="icon" src="/static/x100.PNG" alt="close"></div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="#">Home</a></li>
+            <li class="li2 li"><a href="#">About</a></li>
+            <li class="li3 li"><a href="#">Services</a></li>
+            <li class="li4 li"><a href="#">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">twitter</a></li>
+        </ul>
+        </div>
+    </div>
+    <section class="ref11">
+        <div class="ref11left">
+            <img src="/images/ref1.jpeg" alt="ref1">
+        </div>
+        <div class="ref11right">
+            <h1>Title</h1> <br>
+            <p>[some text goes here]</p><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Iure asperiores nam repellendus sequi rerum! <br> Cumque eum numquam soluta laboriosam quos.</p> <br><br>
+            <p><b>DIRECTOR:</b> Some Name</p>
+            <p><b>KJBHCFG BTTF:</b> Some Name</p>
+            <p><b>KJHGFDRTY:</b> Some Name</p>
+            <p><b>DFGIUYT:</b> Some Name</p>
+            <p><b>FRYIKG:</b> Some Name</p>
+            <p><b>DERST:</b> Some Name</p> <br><br><br>
+            <button>Click Here</button>
+        </div>
+        <div class="ref11next">
+            <p>Next: ref2</p>
+        </div>
+    </section>
+    <section class="sect7">
+        <p>All rights reserved. BOX © 2022</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        var tl = gsap.timeline({
+  paused: "true",
+});
+tl.to(".menu", {
+  duration: 1,
+  x: "0%",
+  //ease: EXPO.easeInOut,
+});
+tl.fromTo(
+  ".li",
+  {
+    y: "-100%",
+    opacity: 0,
+  },
+  {
+    duration: 0.3,
+    opacity: 1,
+    y: "0%",
+    stagger: 0.15,
+  }
+);
+tl.fromTo(
+  ".social-li",
+  {
+    y: "-50%",
+    opacity: 0,
+  },
+  {
+    duration: 0.3,
+    opacity: 1,
+    stagger: 0.15,
+    //ease: EXPO.easeOut,
+  },
+  "-=0.5"
+);
+
+var sc = document.querySelector(".button");
+var xc = document.querySelector(".menu");
+
+sc.addEventListener("click", toggle);
+
+xc.addEventListener("click", togglec);
+
+function toggle() {
+  tl.play();
+}
+function togglec() {
+  tl.reverse();
+}
+
+    </script>
+</body>
+</html>
